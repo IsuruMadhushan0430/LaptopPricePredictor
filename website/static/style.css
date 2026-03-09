@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 490px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(118, 75, 162, 0.1);
+    border: 2px dashed #764ba2;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.inputfield {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputfield label {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.inputfield .input, 
+.custom_select select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+}
+
+.inputfield .input:focus, 
+.custom_select select:focus {
+    border-color: #764ba2;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+}
+
+.check {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.check div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #764ba2;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.custom_select {
+    position: relative;
+}
+
+.custom_select::after {
+    content: '▼';
+    font-size: 12px;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    position: absolute;
+    color: #999;
+    pointer-events: none;
+}
+
+select {
+    appearance: none;
+}
